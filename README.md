@@ -32,10 +32,11 @@ RoCoSDF is a framework built on neural implicit signed distance functions for sh
 --------------------------------------
 
 ## Usage
-Our code is implemented in Python 3.8, PyTorch 1.12.1 and CUDA 11.6
+Our code is implemented in NVIDIA 3090, Ubuntu 18/20, Python 3.8, PyTorch 1.12.1 and CUDA 11.6.
 
 
 ### Install Dependencies 
+For 20/30x GPU:
 ```
 conda create -n rocosdf python=3.8
 conda activate rocosdf
@@ -44,6 +45,14 @@ pip install tqdm pyhocon==0.3.57 trimesh PyMCubes scipy matplotlib
 pip install visdom open3d scikit-image plyfile
 ```
 
+For 40x GPU, cuda 11.8:
+```
+conda create -n rocosdf python=3.10
+conda activate rocosdf
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install tqdm pyhocon==0.3.57 trimesh PyMCubes scipy matplotlib
+pip install visdom open3d scikit-image plyfile
+```
 --------------------------------------
 
 ### Data Preparation
