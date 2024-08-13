@@ -114,6 +114,8 @@ For any queries, please contact [chenhb[at]shanghaitech.edu.cn](mailto:chenhb@sh
 The reference codes are from the following links.
 We appreciate all the contributors.
 
+* FUNSR(UNSR in the proceeding): https://github.com/chenhbo/FUNSR
+* 
 * DeepSDF: https://github.com/facebookresearch/DeepSDF
 
 * NeuralPull: https://github.com/mabaorui/NeuralPull-Pytorch
