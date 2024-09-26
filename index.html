@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Deformable Neural Radiance Fields creates free-viewpoint portraits (maecenas) from casually captured videos."
+    />
+    <meta name="keywords" content="Maecenas, D-NeRF, NeRF" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction
+    </title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-PYVRSFMDRL");
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/favicon.svg" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://chenhbo.github.io">Hongbo Chen</a>,</span
+                >
+                <span class="author-block">
+                  <a href="#">Yuchong Gao</a>,</span
+                >
+                <span class="author-block">
+                  <a href="#">Shuhang Zhang</a>,</span
+                >
+                <span class="author-block">
+                  <a href="#">Jiangjie Wu</a>,</span
+                >
+                <span class="author-block">
+                  <a href="#">Yuexin Ma</a>,</span
+                >
+                <span class="author-block">
+                  <a
+                    href="https://sist.shanghaitech.edu.cn/zhengrui_en/main.htm"
+                    >Rui Zheng</a
+                  >,
+                </span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">ShanghaiTech University</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/kourgeorge/arxiv-style/blob/master/template.pdf"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <!-- Video Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://www.youtube.com/shorts/7fTHD07Q9Pw"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/teaser.mp4" type="video/mp4" />
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">Maecenas</span> imperdiet metus sed lacus
+            euismod, ut vulputate eros elementum. Praesent dapibus auctor
+            malesuada.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-short-1">
+              <video
+                poster=""
+                id="short-1"
+                autoplay
+                controls
+                muted
+                loop
+                playsinline
+                height="100%"
+              >
+                <source src="./static/videos/short-1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="item item-short-2">
+              <video
+                poster=""
+                id="short-2"
+                autoplay
+                controls
+                muted
+                loop
+                playsinline
+                height="100%"
+              >
+                <source src="./static/videos/short-2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="item item-short-3">
+              <video
+                poster=""
+                id="short-3"
+                autoplay
+                controls
+                muted
+                loop
+                playsinline
+                height="100%"
+              >
+                <source src="./static/videos/short-3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="item item-short-4">
+              <video
+                poster=""
+                id="short-4"
+                autoplay
+                controls
+                muted
+                loop
+                playsinline
+                height="100%"
+              >
+                <source src="./static/videos/short-4.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="item item-short-5">
+              <video
+                poster=""
+                id="short-5"
+                autoplay
+                controls
+                muted
+                loop
+                playsinline
+                height="100%"
+              >
+                <source src="./static/videos/short-5.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                sit amet scelerisque velit. Nam sit amet pharetra lectus. Nam
+                pharetra leo pellentesque magna maximus, quis molestie nisl
+                accumsan. Nulla semper varius aliquet. Donec dignissim mollis
+                congue.
+              </p>
+              <p>
+                Vivamus scelerisque ullamcorper augue. Suspendisse scelerisque
+                lorem at scelerisque tempus. Etiam dolor nunc, vestibulum non
+                ante non, vulputate fringilla lacus. Nulla nec nunc at velit
+                eleifend scelerisque in hendrerit nulla. Curabitur egestas
+                blandit nulla, quis faucibus augue. Sed bibendum bibendum purus,
+                in euismod neque blandit et. Morbi sit amet risus molestie,
+                bibendum magna at, volutpat nibh. Suspendisse potenti.
+              </p>
+              <p>
+                Proin quis libero nisi <span class="dnerf">Maecenas</span> et
+                cursus lorem. Vivamus quis eleifend tortor. Nam non cursus nunc.
+                Pellentesque faucibus nec erat cursus molestie. Integer volutpat
+                tristique quam et tincidunt. Mauris finibus scelerisque metus
+                sit amet congue. Nulla facilisi. Vivamus finibus, urna ac
+                scelerisque vestibulum, ligula risus euismod nibh, ut fermentum
+                enim erat et sem. Praesent ut luctus mauris, eget tristique leo.
+                Phasellus in lacus lacus.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">YouTube Video</h2>
+            <div class="publication-video">
+              <iframe
+                src="https://www.youtube.com/embed/NbGhHc4TloE?si=UhntyxPDj77S4qpW"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">BiliBili Video</h2>
+            <div class="publication-video">
+              <iframe
+                src="//player.bilibili.com/player.html?isOutside=true&aid=793084900&bvid=BV1xC4y1i7Dk&cid=1388734637&p=1&autoplay=0"
+                scrolling="no"
+                border="0"
+                frameborder="no"
+                framespacing="0"
+                allowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+      </div>
+    </section>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <!-- Visual Effects. -->
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-3">Video Card</h2>
+              <p>
+                Donec <i>maecenas</i> imperdiet metus sed lacus euismod, ut
+                vulputate eros elementum. Praesent dapibus auctor malesuada.
+              </p>
+              <video
+                id="spinning-snugget"
+                autoplay
+                controls
+                muted
+                loop
+                playsinline
+                height="100%"
+              >
+                <source
+                  src="./static/videos/chicken-nugget-spinning.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+
+          <!-- Matting. -->
+          <div class="column">
+            <h2 class="title is-3">Video Card</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  Quisque iaculis, orci ut ultrices gravida, odio nulla
+                  condimentum lectus, eget condimentum turpis metus nec dolor.
+                  Donec vitae volutpat risus, vitae porttitor erat. Phasellus
+                  elementum dignissim convallis.
+                </p>
+                <video
+                  id="rotating-chip"
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  height="100%"
+                >
+                  <source
+                    src="./static/videos/rotating-chip.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Matting. -->
+
+        <!-- Re-rendering. -->
+        <h2 class="title is-3">Video Card</h2>
+        <div class="content has-text-justified">
+          <p>
+            Quisque dictum euismod nunc <span class="dnerf">Maecenas</span>, id
+            imperdiet enim elementum in. Suspendisse ligula eros, rhoncus vel
+            hendrerit a, iaculis at ipsum.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video
+            id="replay-video"
+            controls
+            muted
+            preload
+            playsinline
+            width="75%"
+          >
+            <source src="./static/videos/bar.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <!--/ Re-rendering. -->
+
+        <!-- Animation. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Interpolating states</h2>
+            <div class="content has-text-justified">
+              <p>
+                Ut consectetur nibh ut auctor dapibus. Mauris et dignissim orci.
+                Maecenas interdum turpis mollis, consectetur magna vel, lobortis
+                turpis. Nulla nec suscipit sapien, sit amet fringilla justo.
+              </p>
+            </div>
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-3 has-text-centered">
+                <img
+                  src="./static/interpolation/stacked/000001.jpg"
+                  class="interpolation-image"
+                  alt="Interpolate start reference image."
+                />
+                <p>Start Frame</p>
+              </div>
+              <div class="column interpolation-video-column">
+                <div id="interpolation-image-wrapper">
+                  <img
+                    id="interpolation-image"
+                    src=""
+                    alt="Interpolation Image"
+                  />
+                </div>
+                <input
+                  class="slider is-fullwidth is-large is-info"
+                  id="interpolation-slider"
+                  step="1"
+                  min="0"
+                  max="100"
+                  value="0"
+                  type="range"
+                />
+              </div>
+              <div class="column is-3 has-text-centered">
+                <img
+                  src="./static/interpolation/stacked/000082.jpg"
+                  class="interpolation-image"
+                  alt="Interpolation end reference image."
+                />
+                <p class="is-bold">End Frame</p>
+              </div>
+            </div>
+            <br />
+            <!--/ Interpolating. -->
+          </div>
+        </div>
+        <!--/ Animation. -->
+
+        <!-- Concurrent Work. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Related Links</h2>
+
+            <div class="content has-text-justified">
+              <p>
+                Proin pharetra aliquam nulla, vitae hendrerit sem venenatis sit
+                amet. Fusce varius, dolor egestas commodo rutrum, massa risus
+                sollicitudin orci, id lobortis est lacus eu diam.
+              </p>
+              <p>
+                <a href="https://arxiv.org/abs/2104.09125">
+                  Aenean Blandit Ante Nisi
+                </a>
+                Etiam ac odio sit amet mi blandit condimentum sit amet sit amet
+                ante. Aenean bibendum dui vel urna imperdiet dignissim. Quisque
+                vehicula tortor nunc, eu tincidunt dolor iaculis et.
+              </p>
+              <p>
+                <a
+                  href="https://www.albertpumarola.com/research/D-NeRF/index.html"
+                >
+                  Curabitur
+                </a>
+                vel
+                <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">
+                  Duis
+                </a>
+                Nulla varius sollicitudin ex. Duis aliquet ante gravida ex
+                tristique, in placerat nibh pharetra. Nulla urna turpis.
+              </p>
+              <p>
+                Nullam tempus mi nec enim finibus ullamcorper.
+                <a href="https://video-nerf.github.io/">Pellentesque</a>,
+                <a href="https://www.cs.cornell.edu/~zl548/NSFF/">Praesent</a>,
+                and
+                <a href="https://neural-3d-video.github.io/">Phasellus</a>
+              </p>
+              <p>
+                Donec bibendum nisl non lacinia accumsan. Maecenas ipsum erat,
+                tempor nec placerat vitae, molestie a nunc.
+                <a href="https://dellaert.github.io/NeRF/">Vestibulum</a>, vel
+                <a href="https://github.com/yenchenlin/awesome-NeRF">Etiam</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Concurrent Work. -->
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre>
+          <code>
+            @article{hongbo2024,
+              author    = {Hongbo Chen and Linzheng Tang and Rui Zheng},
+              title     = {Real Time Neural Surface Incremental Reconstruction for Freehand 3D Ultrasound Carotid Artery Imaging},
+              year      = {2024},
+            }
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="./static/videos/maecenas_paper.pdf">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a
+            class="icon-link"
+            href="https://github.com/keunhong"
+            class="external-link"
+            disabled
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+              <p>
+                Based on
+                <a href="https://github.com/nerfies/nerfies.github.io">
+                  Nerfies' Website
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
