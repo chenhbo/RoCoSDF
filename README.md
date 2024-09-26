@@ -1,13 +1,14 @@
-# FUSurf
+# RoCoSDF
 
-This is the repository that contains source code for the [FUSurf website]( https://zivmax.github.io/FUSurf-web-demo-0/).
+This is the repository that contains source code for the [RoCoSDF website]( https://chenhbo.github.io/RoCoSDF/).
 
-If you find FUSurf useful for your work please cite:
+If you find RoCoSDF useful for your work please cite:
 
 ```
 @article{hongbo2024,
-  author    = {Hongbo Chen and Linzheng Tang and Rui Zheng},
-  title     = {Real Time Neural Surface Incremental Reconstruction for Freehand 3D Ultrasound Carotid Artery Imaging},
+  author    = {ChenRoCoSDF},
+  title     = {RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention – MICCAI 2024},
   year      = {2024},
 }
 ```
