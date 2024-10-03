@@ -1,17 +1,20 @@
 # RoCoSDF
 
-This is the repository that contains source code for the [RoCoSDF website]( https://chenhbo.github.io/RoCoSDF/).
+This is the repository that contains source code for the [RoCoSDF website]( https://chenhbo.github.io/RoCoSDF/). Local Test；
+python -m http.server 8000
 
 If you find RoCoSDF useful for your work please cite:
 
 ```
-@article{hongbo2024,
-  author    = {ChenRoCoSDF},
-  title     = {RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction},
-  booktitle = {Medical Image Computing and Computer Assisted Intervention – MICCAI 2024},
-  year      = {2024},
+@article{chen2024rocosdf,
+  title={RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction},
+  author={Chen, Hongbo and Gao, Yuchong and Zhang, Shuhang and Wu, Jiangjie and Ma, Yuexin and Zheng, Rui},
+  journal={Medical Image Computing and Computer Assisted Intervention – MICCAI 2024},
+  year={2024}
 }
 ```
+
+
 
 # Website License
 

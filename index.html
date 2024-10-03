@@ -9,7 +9,7 @@
     <meta name="keywords" content="Multi-view, RoCoSDF" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction
+      RoCoSDF
     </title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -65,13 +65,13 @@
                   <a href="https://chenhbo.github.io">Hongbo Chen</a>,</span
                 >
                 <span class="author-block">
-                  <a href="#">Yuchong Gao</a>,</span
+                  Yuchong Gao,</span
                 >
                 <span class="author-block">
-                  <a href="#">Shuhang Zhang</a>,</span
+                  Shuhang Zhang,</span
                 >
                 <span class="author-block">
-                  <a href="#">Jiangjie Wu</a>,</span
+                  <a href="https://miraiwu.github.io">Jiangjie Wu</a>,</span
                 >
                 <span class="author-block">
                   <a href="https://yuexinma.me/">Yuexin Ma</a>,</span
@@ -145,91 +145,135 @@
           </h2>
         </div>
       </div>
-    </section> -->
+    </section> --> 
 
-    <!-- <section class="hero is-light is-small">
-      <div class="hero-body">
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-short-1">
+<!-- Section: Video Carousel with Titles -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- First Row of Videos with Title -->
+      <div class="box columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Thoracic Vertebrae T8</h2>
+          <div class="columns">
+            <div class="column">
               <video
                 poster=""
                 id="short-1"
                 autoplay
-                controls
                 muted
                 loop
                 playsinline
-                height="100%"
+                style="width: 120%; height: auto;"
               >
-                <source src="./static/videos/short-1.mp4" type="video/mp4" />
+                <source src="./static/videos/T8_Ro_rotation.mp4" type="video/mp4" />
               </video>
+              <h2 class="subtitle has-text-centered">
+                <span class="caption"> Row scan
+              </h2>
             </div>
-            <div class="item item-short-2">
+            <div class="column">
               <video
                 poster=""
                 id="short-2"
                 autoplay
-                controls
                 muted
                 loop
                 playsinline
-                height="100%"
+                style="width: 120%; height: auto;"
               >
-                <source src="./static/videos/short-2.mp4" type="video/mp4" />
+                <source src="./static/videos/T8_Co_rotation.mp4" type="video/mp4" />
               </video>
+              <h2 class="subtitle has-text-centered">
+                <span class="caption"> Column scan
+              </h2>
             </div>
-            <div class="item item-short-3">
+            <div class="column">
               <video
                 poster=""
                 id="short-3"
                 autoplay
-                controls
                 muted
                 loop
                 playsinline
-                height="100%"
+                style="width: 120%; height: auto;"
               >
-                <source src="./static/videos/short-3.mp4" type="video/mp4" />
+                <source src="./static/videos/T8_RoCo_rotation.mp4" type="video/mp4" />
               </video>
-            </div>
-            <div class="item item-short-4">
-              <video
-                poster=""
-                id="short-4"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                height="100%"
-              >
-                <source src="./static/videos/short-4.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="item item-short-5">
-              <video
-                poster=""
-                id="short-5"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                height="100%"
-              >
-                <source src="./static/videos/short-5.mp4" type="video/mp4" />
-              </video>
+              <h2 class="subtitle has-text-centered">
+                <span class="caption"> RoCoSDF
+              </h2>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
 
+      <!-- Second Row of Videos with Title -->
+      <div class="box columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Thoracic Vertebrae T12</h2>
+          <div class="columns">
+            <div class="column">
+              <video
+                poster=""
+                id="short-4"
+                autoplay
+                muted
+                loop
+                playsinline
+                style="width: 120%; height: auto;"
+              >
+                <source src="./static/videos/T12_Ro_rotation.mp4" type="video/mp4" />
+              </video>
+              <h2 class="subtitle has-text-centered">
+                <span class="caption"> Row scan
+              </h2>
+            </div>
+            <div class="column">
+              <video
+                poster=""
+                id="short-5"
+                autoplay
+                muted
+                loop
+                playsinline
+                style="width: 120%; height: auto;"
+              >
+                <source src="./static/videos/T12_Co_rotation.mp4" type="video/mp4" />
+              </video>
+              <h2 class="subtitle has-text-centered">
+                <span class="caption"> Column scan
+              </h2>
+            </div>
+            <div class="column">
+              <video
+                poster=""
+                id="short-6"
+                autoplay
+                muted
+                loop
+                playsinline
+                style="width: 120%; height: auto;"
+              >
+                <source src="./static/videos/T12_RoCo_rotation.mp4" type="video/mp4" />
+              </video>
+              <h2 class="subtitle has-text-centered">
+                <span class="caption"> RoCoSDF
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Paper image with matching width to the box above -->
     <section class="section">
       <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
+        <!-- Abstract with box shadow. -->
+        <div class="box columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
@@ -257,240 +301,100 @@
             </div>
           </div>
         </div>
-        <!--/ Abstract. -->
 
-        Paper video.
-        <div class="columns is-centered has-text-centered">
+        <!-- Image with matching shadow and width -->
+        <div class="box columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">YouTube Video</h2>
-            <div class="publication-video">
-              <iframe
-                src="./static/videos/Fig_RoCoScan.mp4"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen
-              ></iframe>
+            <div class="publication-image">
+              <img
+                src="./static/images/Fig_RoCoScan.png"
+                alt="RoCoSDF Figure"
+                style="width: 100%; height: auto;"
+              />
             </div>
           </div>
         </div>
-        <!--/ Paper video. -->
-
-        <!-- Paper video. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">BiliBili Video</h2>
-            <div class="publication-video">
-              <iframe
-                src="//player.bilibili.com/player.html?isOutside=true&aid=793084900&bvid=BV1xC4y1i7Dk&cid=1388734637&p=1&autoplay=0"
-                scrolling="no"
-                border="0"
-                frameborder="no"
-                framespacing="0"
-                allowfullscreen="true"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <!--/ Paper video. -->
       </div>
     </section>
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <!-- Visual Effects. -->
-          <div class="column">
-            <div class="content">
-              <h2 class="title is-3">Video Card</h2>
-              <p>
-                Donec <i>maecenas</i> imperdiet metus sed lacus euismod, ut
-                vulputate eros elementum. Praesent dapibus auctor malesuada.
-              </p>
-              <video
-                id="spinning-snugget"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                height="100%"
-              >
-                <source
-                  src="./static/videos/chicken-nugget-spinning.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <!--/ Visual Effects. -->
 
-          <!-- Matting. -->
-          <div class="column">
-            <h2 class="title is-3">Video Card</h2>
-            <div class="columns is-centered">
-              <div class="column content">
-                <p>
-                  Quisque iaculis, orci ut ultrices gravida, odio nulla
-                  condimentum lectus, eget condimentum turpis metus nec dolor.
-                  Donec vitae volutpat risus, vitae porttitor erat. Phasellus
-                  elementum dignissim convallis.
-                </p>
-                <video
-                  id="rotating-chip"
-                  autoplay
-                  controls
-                  muted
-                  loop
-                  playsinline
-                  height="100%"
-                >
-                  <source
-                    src="./static/videos/rotating-chip.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/ Matting. -->
 
-        <!-- Re-rendering. -->
-        <h2 class="title is-3">Video Card</h2>
+
+<!-- Section: Method -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="box columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
-          <p>
-            Quisque dictum euismod nunc <span class="dnerf">Maecenas</span>, id
-            imperdiet enim elementum in. Suspendisse ligula eros, rhoncus vel
-            hendrerit a, iaculis at ipsum.
+            Our proposed method, RoCoSDF, consists of four key steps to achieve high-quality shape reconstruction from 
+            multi-view ultrasound data. <br>
+            
+            <span style="font-weight: bold;">a) Row-Column SDFs Prediction.</span> Separately encode the row/column shape to neural SDFs. <br>
+            
+            <span style="font-weight: bold;">b) SDFs Fusion. </span> Implicitly fuse an SDF field from row-column SDFs. <br>
+           
+            <span style="font-weight: bold;">c) SDF Sampling & Refinement.</span> Sample the data in SDF field for shape refinement. <br>
+            
+            <span style="font-weight: bold;">d) 3D Mesh.</span> Extract the 3D mesh from the optimized SDF using the Marching Cube algorithm. <br>
           </p>
+          <!-- 在此处插入图片 -->
+          <figure>
+            <img src="./static/images/Fig_RoCoSDF.png" alt="方法示意图">
+            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+          </figure>
+          <p>
         </div>
-        <div class="content has-text-centered">
-          <video
-            id="replay-video"
-            controls
-            muted
-            preload
-            playsinline
-            width="75%"
-          >
-            <source src="./static/videos/bar.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-        <!-- Animation. -->
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-            <h2 class="title is-3">Interpolating states</h2>
-            <div class="content has-text-justified">
-              <p>
-                Ut consectetur nibh ut auctor dapibus. Mauris et dignissim orci.
-                Maecenas interdum turpis mollis, consectetur magna vel, lobortis
-                turpis. Nulla nec suscipit sapien, sit amet fringilla justo.
-              </p>
-            </div>
-            <div class="columns is-vcentered interpolation-panel">
-              <div class="column is-3 has-text-centered">
-                <img
-                  src="./static/interpolation/stacked/000001.jpg"
-                  class="interpolation-image"
-                  alt="Interpolate start reference image."
-                />
-                <p>Start Frame</p>
-              </div>
-              <div class="column interpolation-video-column">
-                <div id="interpolation-image-wrapper">
-                  <img
-                    id="interpolation-image"
-                    src=""
-                    alt="Interpolation Image"
-                  />
-                </div>
-                <input
-                  class="slider is-fullwidth is-large is-info"
-                  id="interpolation-slider"
-                  step="1"
-                  min="0"
-                  max="100"
-                  value="0"
-                  type="range"
-                />
-              </div>
-              <div class="column is-3 has-text-centered">
-                <img
-                  src="./static/interpolation/stacked/000082.jpg"
-                  class="interpolation-image"
-                  alt="Interpolation end reference image."
-                />
-                <p class="is-bold">End Frame</p>
-              </div>
-            </div>
-            <br />
-            <!--/ Interpolating. -->
-          </div>
-        </div>
-        <!--/ Animation. -->
-
-        <!-- Concurrent Work. -->
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-            <h2 class="title is-3">Related Links</h2>
-
-            <div class="content has-text-justified">
-              <p>
-                Proin pharetra aliquam nulla, vitae hendrerit sem venenatis sit
-                amet. Fusce varius, dolor egestas commodo rutrum, massa risus
-                sollicitudin orci, id lobortis est lacus eu diam.
-              </p>
-              <p>
-                <a href="https://arxiv.org/abs/2104.09125">
-                  Aenean Blandit Ante Nisi
-                </a>
-                Etiam ac odio sit amet mi blandit condimentum sit amet sit amet
-                ante. Aenean bibendum dui vel urna imperdiet dignissim. Quisque
-                vehicula tortor nunc, eu tincidunt dolor iaculis et.
-              </p>
-              <p>
-                <a
-                  href="https://www.albertpumarola.com/research/D-NeRF/index.html"
-                >
-                  Curabitur
-                </a>
-                vel
-                <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">
-                  Duis
-                </a>
-                Nulla varius sollicitudin ex. Duis aliquet ante gravida ex
-                tristique, in placerat nibh pharetra. Nulla urna turpis.
-              </p>
-              <p>
-                Nullam tempus mi nec enim finibus ullamcorper.
-                <a href="https://video-nerf.github.io/">Pellentesque</a>,
-                <a href="https://www.cs.cornell.edu/~zl548/NSFF/">Praesent</a>,
-                and
-                <a href="https://neural-3d-video.github.io/">Phasellus</a>
-              </p>
-              <p>
-                Donec bibendum nisl non lacinia accumsan. Maecenas ipsum erat,
-                tempor nec placerat vitae, molestie a nunc.
-                <a href="https://dellaert.github.io/NeRF/">Vestibulum</a>, vel
-                <a href="https://github.com/yenchenlin/awesome-NeRF">Etiam</a>.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!--/ Concurrent Work. -->
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+ <!-- Section: Method -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="box columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Thoracic Vertabra T4</h3>
+          <!-- 在此处插入图片 -->
+          <figure>
+            <img src="./static/images/Fig_Result_T4.png" alt="方法示意图">
+            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+          </figure>
+          <h3 class="title is-4">Lumbar Vertabra L1</h3>
+          <!-- 在此处插入图片 -->
+          <figure>
+            <img src="./static/images/Fig_Result_L1.png" alt="方法示意图">
+            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+          </figure>
+          <!-- 在此处插入图片 -->
+          <figure>
+            <img src="./static/images/Fig_Result_L3.png" alt="方法示意图">
+            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+          </figure>
+          <h3 class="title is-4">Volume Rendering V.S. Surface Rendering</h3>
+          <!-- 在此处插入图片 -->
+          <figure>
+            <img src="./static/images/Fig_VS.png" alt="方法示意图">
+            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>   
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre>
           <code>
-            @article{hongbo2024,
-              author    = {Hongbo Chen and Linzheng Tang and Rui Zheng},
-              title     = {Real Time Neural Surface Incremental Reconstruction for Freehand 3D Ultrasound Carotid Artery Imaging},
-              year      = {2024},
+            @article{chen2024rocosdf,
+              title={RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction},
+              author={Chen, Hongbo and Gao, Yuchong and Zhang, Shuhang and Wu, Jiangjie and Ma, Yuexin and Zheng, Rui},
+              journal={Medical Image Computing and Computer Assisted Intervention – MICCAI 2024},
+              year={2024}
             }
           </code>
         </pre>
