@@ -48,3 +48,21 @@ $(document).ready(function () {
 
   bulmaSlider.attach();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const videos = document.querySelectorAll('video');
+  let loadedCount = 0;
+
+  videos.forEach(video => {
+    video.autoplay = false; // Disable autoplay initially
+
+    video.addEventListener('loadeddata', () => {
+      loadedCount++;
+      
+      // Check if all videos are loaded
+      if (loadedCount === videos.length) {
+        videos.forEach(v => v.play());
+      }
+    });
+  });
+});
