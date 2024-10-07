@@ -1,138 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction."
-    />
-    <meta name="keywords" content="Multi-view, RoCoSDF" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      RoCoSDF
-    </title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+<head>
+  <meta charset="utf-8" />
+  <meta name="description"
+    content="Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction." />
+  <meta name="keywords" content="Multi-view, RoCoSDF" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    RoCoSDF
+  </title>
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-      gtag("js", new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-      gtag("config", "G-PYVRSFMDRL");
-    </script>
+    gtag("js", new Date());
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
+    gtag("config", "G-PYVRSFMDRL");
+  </script>
 
-    <link rel="stylesheet" href="./static/css/bulma.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
-    <link rel="stylesheet" href="./static/css/index.css" />
-    <link rel="icon" href="./static/images/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
-    <script src="./static/js/bulma-carousel.min.js"></script>
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
-  </head>
-  <body>
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
+  <link rel="stylesheet" href="./static/css/bulma.min.css" />
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="./static/css/index.css" />
+  <link rel="icon" href="./static/images/favicon.svg" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://chenhbo.github.io">Hongbo Chen</a>,</span>
+              <span class="author-block">
+                Yuchong Gao,</span>
+              <span class="author-block">
+                Shuhang Zhang,</span>
+              <span class="author-block">
+                <a href="https://miraiwu.github.io">Jiangjie Wu</a>,</span>
+              <span class="author-block">
+                <a href="https://yuexinma.me/">Yuexin Ma</a>,</span>
+              <span class="author-block">
+                <a href="https://sist.shanghaitech.edu.cn/zhengrui_en/main.htm">Rui Zheng</a>,
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">ShanghaiTech University</span>
+            </div>
+
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
-                Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction
-              </h1>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a href="https://chenhbo.github.io">Hongbo Chen</a>,</span
-                >
-                <span class="author-block">
-                  Yuchong Gao,</span
-                >
-                <span class="author-block">
-                  Shuhang Zhang,</span
-                >
-                <span class="author-block">
-                  <a href="https://miraiwu.github.io">Jiangjie Wu</a>,</span
-                >
-                <span class="author-block">
-                  <a href="https://yuexinma.me/">Yuexin Ma</a>,</span
-                >
-                <span class="author-block">
-                  <a
-                    href="https://sist.shanghaitech.edu.cn/zhengrui_en/main.htm"
-                    >Rui Zheng</a
-                  >,
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2408.07325.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
                 </span>
-              </div>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">ShanghaiTech University</span>
-              </div>
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- PDF Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/pdf/2408.07325.pdf"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/abs/2408.07325/"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <!-- Code Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://github.com/chenhbo/RoCoSDF"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                </div>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2408.07325/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/chenhbo/RoCoSDF"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- <section class="hero teaser">
+  <!-- <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
           <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -145,250 +121,216 @@
           </h2>
         </div>
       </div>
-    </section> --> 
+    </section> -->
 
-<!-- Section: Video Carousel with Titles -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- First Row of Videos with Title -->
-      <div class="box columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-4">Thoracic Vertebrae T8</h2>
-          <div class="columns">
-            <div class="column">
-              <video
-                poster=""
-                id="short-1"
-                autoplay
-                muted
-                loop
-                playsinline
-                style="width: 120%; height: auto;"
-              >
-                <source src="./static/videos/T8_Ro_rotation.mp4" type="video/mp4" />
-              </video>
-              <h2 class="subtitle has-text-centered">
-                <span class="caption"> Row scan
-              </h2>
-            </div>
-            <div class="column">
-              <video
-                poster=""
-                id="short-2"
-                autoplay
-                muted
-                loop
-                playsinline
-                style="width: 120%; height: auto;"
-              >
-                <source src="./static/videos/T8_Co_rotation.mp4" type="video/mp4" />
-              </video>
-              <h2 class="subtitle has-text-centered">
-                <span class="caption"> Column scan
-              </h2>
-            </div>
-            <div class="column">
-              <video
-                poster=""
-                id="short-3"
-                autoplay
-                muted
-                loop
-                playsinline
-                style="width: 120%; height: auto;"
-              >
-                <source src="./static/videos/T8_RoCo_rotation.mp4" type="video/mp4" />
-              </video>
-              <h2 class="subtitle has-text-centered">
-                <span class="caption"> RoCoSDF
-              </h2>
+  <!-- Section: Video Carousel with Titles -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- First Row of Videos with Title -->
+        <div class="box columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-4">Thoracic Vertebrae T8</h2>
+            <div class="columns">
+              <div class="column">
+                <video poster="" id="short-1" autoplay muted loop playsinline style="width: 120%; height: auto;">
+                  <source src="./static/videos/T8_Ro_rotation.mp4" type="video/mp4" />
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <span class="caption"> Row scan
+                </h2>
+              </div>
+              <div class="column">
+                <video poster="" id="short-2" autoplay muted loop playsinline style="width: 120%; height: auto;">
+                  <source src="./static/videos/T8_Co_rotation.mp4" type="video/mp4" />
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <span class="caption"> Column scan
+                </h2>
+              </div>
+              <div class="column">
+                <video poster="" id="short-3" autoplay muted loop playsinline style="width: 120%; height: auto;">
+                  <source src="./static/videos/T8_RoCo_rotation.mp4" type="video/mp4" />
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <span class="caption"> RoCoSDF
+                </h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Second Row of Videos with Title -->
-      <div class="box columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-4">Thoracic Vertebrae T12</h2>
-          <div class="columns">
-            <div class="column">
-              <video
-                poster=""
-                id="short-4"
-                autoplay
-                muted
-                loop
-                playsinline
-                style="width: 120%; height: auto;"
-              >
-                <source src="./static/videos/T12_Ro_rotation.mp4" type="video/mp4" />
-              </video>
-              <h2 class="subtitle has-text-centered">
-                <span class="caption"> Row scan
-              </h2>
-            </div>
-            <div class="column">
-              <video
-                poster=""
-                id="short-5"
-                autoplay
-                muted
-                loop
-                playsinline
-                style="width: 120%; height: auto;"
-              >
-                <source src="./static/videos/T12_Co_rotation.mp4" type="video/mp4" />
-              </video>
-              <h2 class="subtitle has-text-centered">
-                <span class="caption"> Column scan
-              </h2>
-            </div>
-            <div class="column">
-              <video
-                poster=""
-                id="short-6"
-                autoplay
-                muted
-                loop
-                playsinline
-                style="width: 120%; height: auto;"
-              >
-                <source src="./static/videos/T12_RoCo_rotation.mp4" type="video/mp4" />
-              </video>
-              <h2 class="subtitle has-text-centered">
-                <span class="caption"> RoCoSDF
-              </h2>
+        <!-- Second Row of Videos with Title -->
+        <div class="box columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-4">Thoracic Vertebrae T12</h2>
+            <div class="columns">
+              <div class="column">
+                <video poster="" id="short-4" autoplay muted loop playsinline style="width: 120%; height: auto;">
+                  <source src="./static/videos/T12_Ro_rotation.mp4" type="video/mp4" />
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <span class="caption"> Row scan
+                </h2>
+              </div>
+              <div class="column">
+                <video poster="" id="short-5" autoplay muted loop playsinline style="width: 120%; height: auto;">
+                  <source src="./static/videos/T12_Co_rotation.mp4" type="video/mp4" />
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <span class="caption"> Column scan
+                </h2>
+              </div>
+              <div class="column">
+                <video poster="" id="short-6" autoplay muted loop playsinline style="width: 120%; height: auto;">
+                  <source src="./static/videos/T12_RoCo_rotation.mp4" type="video/mp4" />
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <span class="caption"> RoCoSDF
+                </h2>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-    <!-- Paper image with matching width to the box above -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Abstract with box shadow. -->
-        <div class="box columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                The reconstruction of high-quality shape geometry is crucial for developing freehand 3D ultrasound imaging. 
-                However, the shape reconstruction of multi-view ultrasound data remains challenging due to the elevation distortion caused by 
-                thick transducer probes. 
-              </p>
-              <p>
-                In this paper, we present a novel learning-based framework RoCoSDF, 
-                which can effectively generate an implicit surface through continuous shape representations derived from row-column 
-                scanned datasets. 
-                In RoCoSDF, we encode the datasets from different views into the corresponding neural signed 
-                distance function (SDF) and then operate all SDFs in a normalized 3D space to 
-                restore the actual surface contour. Without requiring pre-training on large-scale ground truth shapes, 
-                our approach can synthesize a smooth and continuous signed distance field from multi-view 
-                SDFs to implicitly represent the actual geometry. Furthermore, two regularizers are 
-                introduced to facilitate shape refinement by constraining the SDF near the surface. 
-              </p>
-              <p>
-                The experiments on twelve shapes data acquired by two ultrasound transducer probes validate that 
-                RoCoSDF can effectively reconstruct accurate geometric shapes from multi-view ultrasound data, 
-                which outperforms current reconstruction methods.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image with matching shadow and width -->
-        <div class="box columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <div class="publication-image">
-              <img
-                src="./static/images/Fig_RoCoScan.webp"
-                alt="RoCoSDF Figure"
-                style="width: 100%; height: auto;"
-              />
-            </div>
+  <!-- Paper image with matching width to the box above -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract with box shadow. -->
+      <div class="box columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The reconstruction of high-quality shape geometry is crucial for developing freehand 3D ultrasound
+              imaging.
+              However, the shape reconstruction of multi-view ultrasound data remains challenging due to the elevation
+              distortion caused by
+              thick transducer probes.
+            </p>
+            <p>
+              In this paper, we present a novel learning-based framework RoCoSDF,
+              which can effectively generate an implicit surface through continuous shape representations derived from
+              row-column
+              scanned datasets.
+              In RoCoSDF, we encode the datasets from different views into the corresponding neural signed
+              distance function (SDF) and then operate all SDFs in a normalized 3D space to
+              restore the actual surface contour. Without requiring pre-training on large-scale ground truth shapes,
+              our approach can synthesize a smooth and continuous signed distance field from multi-view
+              SDFs to implicitly represent the actual geometry. Furthermore, two regularizers are
+              introduced to facilitate shape refinement by constraining the SDF near the surface.
+            </p>
+            <p>
+              The experiments on twelve shapes data acquired by two ultrasound transducer probes validate that
+              RoCoSDF can effectively reconstruct accurate geometric shapes from multi-view ultrasound data,
+              which outperforms current reconstruction methods.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Image with matching shadow and width -->
+      <div class="box columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-image">
+            <img src="./static/images/Fig_RoCoScan.webp" alt="RoCoSDF Figure" style="width: 100%; height: auto;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-<!-- Section: Method -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="box columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
-            Our proposed method, RoCoSDF, consists of four key steps to achieve high-quality shape reconstruction from 
+  <!-- Section: Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="box columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            Our proposed method, RoCoSDF, consists of four key steps to achieve high-quality shape reconstruction from
             multi-view ultrasound data. <br>
-            
-            <span style="font-weight: bold;">a) Row-Column SDFs Prediction.</span> Separately encode the row/column shape to neural SDFs. <br>
-            
-            <span style="font-weight: bold;">b) SDFs Fusion. </span> Implicitly fuse an SDF field from row-column SDFs. <br>
-           
-            <span style="font-weight: bold;">c) SDF Sampling & Refinement.</span> Sample the data in SDF field for shape refinement. <br>
-            
-            <span style="font-weight: bold;">d) 3D Mesh.</span> Extract the 3D mesh from the optimized SDF using the Marching Cube algorithm. <br>
-          </p>
-          <!-- 在此处插入图片 -->
-          <figure>
-            <img src="./static/images/Fig_RoCoSDF.webp" alt="方法示意图">
-            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
-          </figure>
-          <p>
+
+            <span style="font-weight: bold;">a) Row-Column SDFs Prediction.</span> Separately encode the row/column
+            shape to neural SDFs. <br>
+
+            <span style="font-weight: bold;">b) SDFs Fusion. </span> Implicitly fuse an SDF field from row-column SDFs.
+            <br>
+
+            <span style="font-weight: bold;">c) SDF Sampling & Refinement.</span> Sample the data in SDF field for shape
+            refinement. <br>
+
+            <span style="font-weight: bold;">d) 3D Mesh.</span> Extract the 3D mesh from the optimized SDF using the
+            Marching Cube algorithm. <br>
+            </p>
+            <!-- 在此处插入图片 -->
+            <figure>
+              <img src="./static/images/Fig_RoCoSDF.webp" alt="方法示意图">
+              <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+            </figure>
+            <p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
- <!-- Section: Method -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="box columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
-          <h3 class="title is-4">Thoracic Vertabra T4</h3>
-          <!-- 在此处插入图片 -->
-          <figure>
-            <img src="./static/images/Fig_Result_T4.webp" alt="方法示意图">
-            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
-          </figure>
-          <h3 class="title is-4">Lumbar Vertabra L1</h3>
-          <!-- 在此处插入图片 -->
-          <figure>
-            <img src="./static/images/Fig_Result_L1.webp" alt="方法示意图">
-            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
-          </figure>
-          <!-- 在此处插入图片 -->
-          <figure>
-            <img src="./static/images/Fig_Result_L3.webp" alt="方法示意图">
-            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
-          </figure>
-          <h3 class="title is-4">Volume Rendering V.S. Surface Rendering</h3>
-          <!-- 在此处插入图片 -->
-          <figure>
-            <img src="./static/images/Fig_VS.webp" alt="方法示意图">
-            <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
-          </figure>
+  <!-- Section: Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="box columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified">
+            <h3 class="title is-4">Thoracic Vertabra T4</h3>
+            <!-- 在此处插入图片 -->
+            <figure>
+              <img src="./static/images/Fig_Result_T4.webp" alt="方法示意图">
+              <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+            </figure>
+            <h3 class="title is-4">Lumbar Vertabra L1</h3>
+            <!-- 在此处插入图片 -->
+            <figure>
+              <img src="./static/images/Fig_Result_L1.webp" alt="方法示意图">
+              <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+            </figure>
+            <!-- 在此处插入图片 -->
+            <figure>
+              <img src="./static/images/Fig_Result_L3.webp" alt="方法示意图">
+              <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+            </figure>
+            <h3 class="title is-4">Volume Rendering V.S. Surface Rendering</h3>
+            <!-- 在此处插入图片 -->
+            <figure>
+              <img src="./static/images/Fig_VS.webp" alt="方法示意图">
+              <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+            </figure>
+            <h3 class="title is-4">Modeling-based Multi-view Human Lumbar Spine Shape Reconstruction</h3>
+            <!-- 在此处插入图片 -->
+            <figure>
+              <img src="./static/images/Fig_Result_All_1.webp" alt="方法示意图">
+              <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+            </figure>
+            <!-- 在此处插入图片 -->
+            <figure>
+              <img src="./static/images/Fig_Result_All_2.webp" alt="方法示意图">
+              <!-- <figcaption>Framework of RoCoSDF </figcaption> -->
+            </figure>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>   
+  </section>
 
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre>
           <code>
             @article{chen2024rocosdf,
               title={RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction},
@@ -398,33 +340,31 @@
             }
           </code>
         </pre>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content">
-              <p>
-                This website is licensed under a
-                <a
-                  rel="license"
-                  href="http://creativecommons.org/licenses/by-sa/4.0/"
-                  >Creative Commons Attribution-ShareAlike 4.0 International
-                  License</a
-                >.
-              </p>
-              <p>
-                Based on
-                <a href="https://nerfies.github.io/">
-                  Nerfies' Website
-                </a>
-              </p>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+                Attribution-ShareAlike 4.0 International
+                License</a>.
+            </p>
+            <p>
+              Based on
+              <a href="https://nerfies.github.io/">
+                Nerfies' Website
+              </a>
+            </p>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
