@@ -2,7 +2,7 @@
 --------------------------------------
 
 The official implementation code for MICCAI 2024 paper:
-RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction
+[RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction](https://chenhbo.github.io/RoCoSDF/)
 by [Hongbo Chen](https://chenhbo.github.io/), Yuchong Gao, Shuhang Zhang, Jiangjie Wu, [Yuexin Ma](https://yuexinma.me/) and [Rui Zheng](https://sist.shanghaitech.edu.cn/zhengrui_en/main.htm).
 
 
