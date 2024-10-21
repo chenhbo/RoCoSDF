@@ -73,6 +73,12 @@ class DatasetRoCo:
             print('Only support .xyz or .ply data. Please make adjust your data.')
             exit()
 
+        # Normalization if needed
+        # shape_scale = np.max([np.max(pointcloud[:,0])-np.min(pointcloud[:,0]),np.max(pointcloud[:,1])-np.min(pointcloud[:,1]),np.max(pointcloud[:,2])-np.min(pointcloud[:,2])])
+        # shape_center = [(np.max(pointcloud[:,0])+np.min(pointcloud[:,0]))/2, (np.max(pointcloud[:,1])+np.min(pointcloud[:,1]))/2, (np.max(pointcloud[:,2])+np.min(pointcloud[:,2]))/2]
+        # pointcloud = pointcloud - shape_center
+        # pointcloud = pointcloud / shape_scale
+    
         pc = self.FPS_sampling(pointcloud,data_dir,dataname)   # FPS downsampling
 
 
