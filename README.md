@@ -6,15 +6,27 @@ python -m http.server 8000
 If you find RoCoSDF useful for your work please cite:
 
 ```
-@InProceedings{Chen_RoCoSDF_MICCAI2024,
-        author = { Chen, Hongbo and Gao, Yuchong and Zhang, Shuhang and Wu, Jiangjie and Ma, Yuexin and Zheng, Rui},
-        title = { { RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction } },
-        booktitle = {proceedings of Medical Image Computing and Computer Assisted Intervention -- MICCAI 2024},
-        year = {2024},
-        publisher = {Springer Nature Switzerland},
-        volume = {LNCS 15004},
-        month = {October},
-        page = {pending}
+@InProceedings{chenRoCoSDF,
+author="Chen, Hongbo
+and Gao, Yuchong
+and Zhang, Shuhang
+and Wu, Jiangjie
+and Ma, Yuexin
+and Zheng, Rui",
+editor="Linguraru, Marius George
+and Dou, Qi
+and Feragen, Aasa
+and Giannarou, Stamatia
+and Glocker, Ben
+and Lekadir, Karim
+and Schnabel, Julia A.",
+title="RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction",
+booktitle="Medical Image Computing and Computer Assisted Intervention -- MICCAI 2024",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="721--731",
+isbn="978-3-031-72083-3"
 }
 ```
 
