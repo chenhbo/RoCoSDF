@@ -108,6 +108,24 @@ python runRoCoSDF.py --gpu 0  --conf confs/conf.conf --dataname T4_Co --dataname
 ### Contact
 For any queries, please contact [chenhb[at]shanghaitech.edu.cn](mailto:chenhb@shanghaitech.edu.cn).
 
+### Citation
+If you use RoCoSDF in your research, please cite the paper:
+
+ @InProceedings{chenRoCoSDF,
+   author="Chen, Hongbo
+   and Gao, Yuchong
+   and Zhang, Shuhang
+   and Wu, Jiangjie
+   and Ma, Yuexin
+   and Zheng, Rui",
+   title="RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction",
+   booktitle="Medical Image Computing and Computer Assisted Intervention -- MICCAI 2024",
+   year="2024",
+   publisher="Springer Nature Switzerland",
+   address="Cham",
+   pages="721--731",
+   isbn="978-3-031-72083-3"
+   }
 --------------------------------------
 
 ### References
