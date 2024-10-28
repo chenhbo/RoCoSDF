@@ -111,6 +111,7 @@ For any queries, please contact [chenhb[at]shanghaitech.edu.cn](mailto:chenhb@sh
 ### Citation
 If you use RoCoSDF in your research, please cite the paper:
 
+```
  @InProceedings{chenRoCoSDF,
    author="Chen, Hongbo
    and Gao, Yuchong
@@ -126,6 +127,7 @@ If you use RoCoSDF in your research, please cite the paper:
    pages="721--731",
    isbn="978-3-031-72083-3"
    }
+```
 --------------------------------------
 
 ### References
